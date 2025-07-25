@@ -1,0 +1,3 @@
+/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
+/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/_deps/catch2-subbuild/CMakeFiles/edit_cache.dir
+/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/_deps/catch2-subbuild/CMakeFiles/rebuild_cache.dir

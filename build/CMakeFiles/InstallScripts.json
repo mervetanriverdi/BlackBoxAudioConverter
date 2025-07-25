@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/cmake_install.cmake",
+		"/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/tests/cmake_install.cmake",
+		"/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/_deps/catch2-build/cmake_install.cmake",
+		"/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/build/_deps/catch2-build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

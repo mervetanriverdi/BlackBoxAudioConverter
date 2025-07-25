@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AudioConverterUI.MainWindow"
+        Title="Ses Süresi Seçimi" Width="400" Height="300">
+
+    <StackPanel Margin="20">
+        <TextBlock FontSize="16">
+            <TextBlock.Inlines>
+                <Run Text="Toplam süre: "/>
+                <Run Text="{Binding TotalDuration}"/>
+            </TextBlock.Inlines>
+        </TextBlock>
+
+        <TextBlock Text="Dönüştürmek istediğiniz süreyi seçin:" Margin="0,10,0,5"/>
+        <ComboBox ItemsSource="{Binding Options}" SelectedItem="{Binding SelectedOption}" />
+        <Button Content="Dönüştür" Margin="0,10,0,0" Command="{Binding ConvertCommand}"/>
+        <TextBlock Text="{Binding StatusMessage}" Margin="0,10,0,0" />
+    </StackPanel>
+</Window>

@@ -1,0 +1,18 @@
+//burada AudioConverterServer.cpp değişiklik yapılırsa executable ı ; AudioConverter.cpp değişirse de dll i otomatik güncelliyor.
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "AudioConverter\\.cpp$",
+        "cmd": "clang++ -arch arm64 -std=c++11 -dynamiclib -o \"${workspaceFolder}/build/libAudioConverterDll.dylib\" \"${file}\" -install_name @rpath/libAudioConverterDll.dylib && cp \"${workspaceFolder}/build/libAudioConverterDll.dylib\" \"${workspaceFolder}/AudioConverterServer/\" && cp \"${workspaceFolder}/build/libAudioConverterDll.dylib\" \"${workspaceFolder}/AudioConverterUI/bin/Debug/net8.0/\""
+      },
+      {
+        "match": "AudioConverterServer\\.cpp$",
+        "cmd": "clang++ -std=c++17 -Wall -Wextra -O2 -I\"${workspaceFolder}/AudioConverterServer/include\" \"${file}\" -o \"${workspaceFolder}/AudioConverterServer/AudioConverterServerExecutable\" -L\"${workspaceFolder}/build\" -lAudioConverterDll -L\"${workspaceFolder}/AudioConverterServer/lib\" -lzmq -Wl,-rpath,@executable_path/"
+      }
+    ]
+  },
+  "cmake.sourceDirectory": "/Users/mervetanriverdi/Desktop/BlackBoxAudioConverter/AudioConverterDll/include/cppzmq",
+  "cmsake.buildDirectory": "${workspaceFolder}/build"
+
+}
